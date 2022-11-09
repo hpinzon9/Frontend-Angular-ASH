@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { ignoreElements, Observable } from 'rxjs';
 import { ModeloIdentificar } from '../modelos/identificar.modelo';
 
 @Injectable({
@@ -23,5 +23,24 @@ export class SeguridadService {
 
       })
     })
-}
+  }
+
+  AlmacenarSesion(datos: ModeloIdentificar){
+    let stringDatos = JSON.stringify(datos);
+    localStorage.setItem("datosSesion", stringDatos);
+  }
+
+  ObtenerInformacionSesion(){
+    let datosString = localStorage.getItem("datosSesion");
+    if(datosString){
+      let datos = JSON.parse(datosString);
+      return datos;
+    }else{
+      return null;
+    }
+  }
+
+  EliminarInformacionSesion(){
+    localStorage.removeItem("datosSesion");
+  }
 }
