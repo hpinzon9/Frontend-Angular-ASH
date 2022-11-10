@@ -5,17 +5,19 @@
       ><i class="material-icons">menu</i></a
     >
     <ul class="right hide-on-med-and-down">
-      <li><a routerLink="/administracion/personas">Personas</a></li>
-      <li><a routerLink="/administracion/clientes">Components</a></li>
-      <li><a routerLink="/seguridad/cambioClave">Cambiar clave</a></li>
-      <li><a routerLink="/seguridad/identificar">Iniciar Sesion</a></li>
+      <li *ngIf="seInicioSesion"><a routerLink="/administracion/personas">Personas</a></li>
+      <li *ngIf="seInicioSesion"><a routerLink="/administracion/clientes">Components</a></li>
+      <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cambioClave">Cambiar clave</a></li>
+      <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrarSesion">Cerrar Sesion</a></li>
+      <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/identificar">Iniciar Sesion</a></li>
     </ul>
   </div>
 </nav>
 
 <ul class="sidenav" id="mobile-demo">
-  <li><a routerLink="/administracion/personas">Personas</a></li>
-  <li><a routerLink="/administracion/clientes">Components</a></li>
-  <li><a routerLink="/seguridad/cambioClave">Cambiar clave</a></li>
-  <li><a routerLink="/seguridad/identificar">Iniciar Sesion</a></li>
+  <li *ngIf="seInicioSesion"><a routerLink="/administracion/personas">Personas</a></li>
+  <li *ngIf="seInicioSesion"><a routerLink="/administracion/clientes">Components</a></li>
+  <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cambioClave">Cambiar clave</a></li>
+  <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrarSesion">Cerrar Sesion</a></li>
+  <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/identificar">Iniciar Sesion</a></li>
 </ul>
