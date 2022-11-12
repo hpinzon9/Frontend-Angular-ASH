@@ -8,7 +8,7 @@ import { ModeloIdentificar } from '../modelos/identificar.modelo';
 })
 export class SeguridadService {
 
-  url = 'http://localhost/3000';
+  url = 'http://localhost:3000';
   datosUsuarioEnSesion = new BehaviorSubject<ModeloIdentificar>(new ModeloIdentificar());
 
   constructor(private http: HttpClient) {
@@ -43,6 +43,7 @@ export class SeguridadService {
 AlmacenarSesion(datos: ModeloIdentificar){
   datos.estaIdentificado=true;
   let stringDatos= JSON.stringify(datos);
+  console.log("Llegue" + stringDatos);
   localStorage.setItem("datosSesion", stringDatos);
   this.RefrescarDatosSesion(datos);
 
