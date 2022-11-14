@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { discardPeriodicTasks } from '@angular/core/testing';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { ModeloIdentificar } from '../modelos/identificar.modelo';
 
@@ -67,5 +68,14 @@ seHaIniciadoSesion(){
   return datosString;
 }
 
+ObtenerToken(){
+  let datosString=localStorage.getItem("datosSesion");
+  if(datosString){
+    let datos = JSON.parse(datosString);
+    return datos.tk;
+  }else{
+    return '';
+  }
+}
 
 }

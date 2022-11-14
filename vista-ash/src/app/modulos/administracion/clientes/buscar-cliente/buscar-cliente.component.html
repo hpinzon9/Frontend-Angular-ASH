@@ -1,1 +1,36 @@
-<p>buscar-cliente works!</p>
+<h3>Listado de Clientes</h3>
+<a routerLink="/administracion/crear-cliente" class="btn">Nuevo Cliente</a>
+<table class="table responsive">
+  <thead>
+    <tr>
+      <th>Identificacion</th>
+      <th>Razon Social</th>
+      <th>Telefono</th>
+      <th>Direccion</th>
+      <th>Correo</th>
+      <th>Editar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of listadoRegistros">
+        <td>
+            {{p.identificacion}}
+        </td>
+        <td>
+            {{p.razon_social}}
+        </td>
+        <td>
+            {{p.telefono}}
+        </td>
+        <td>
+            {{p.direccion}}
+        </td>
+        <td>
+            {{p.correo}}
+        </td>
+        <td>
+          <!-- <a routerLink="/administracion/editar-cliente/{{p.id}}" class="btn">Editar Cliente</a> -->
+        </td>
+    </tr>
+  </tbody>
+</table>
