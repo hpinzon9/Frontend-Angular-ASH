@@ -6,6 +6,11 @@ import { CrearPersonaComponent } from './personas/crear-persona/crear-persona.co
 import { EditarPersonaComponent } from './personas/editar-persona/editar-persona.component';
 import { EliminarPersonaComponent } from './personas/eliminar-persona/eliminar-persona.component';
 import { BuscarPersonaComponent } from './personas/buscar-persona/buscar-persona.component';
+import { EmpresaComponent } from './empresa/empresa.component';
+import { CrearEmpresaComponent } from './empresa/crear-empresa/crear-empresa.component';
+import { EditEmpresaComponent } from './empresa/edit-empresa/edit-empresa.component';
+import { EliminarEmpresaComponent } from './empresa/eliminar-empresa/eliminar-empresa.component';
+import { BuscarEmpresaComponent } from './empresa/buscar-empresa/buscar-empresa.component';
 
 
 @NgModule({
@@ -13,7 +18,12 @@ import { BuscarPersonaComponent } from './personas/buscar-persona/buscar-persona
     CrearPersonaComponent,
     EditarPersonaComponent,
     EliminarPersonaComponent,
-    BuscarPersonaComponent
+    BuscarPersonaComponent,
+    EmpresaComponent,
+    CrearEmpresaComponent,
+    EditEmpresaComponent,
+    EliminarEmpresaComponent,
+    BuscarEmpresaComponent
   ],
   imports: [
     CommonModule,
