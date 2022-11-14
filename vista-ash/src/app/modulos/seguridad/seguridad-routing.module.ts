@@ -7,8 +7,9 @@ const routes: Routes = [
   {
     path: "identificar",
     component: IdentificacionComponent
-  },{
-    path:"cerrarSesion",
+  },
+  {
+    path:"CerrarSesion",
     component: CerrarSesionComponent
   }
 ];
