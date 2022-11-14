@@ -14,20 +14,21 @@ export class SeguridadService {
   constructor(private http: HttpClient) {
     this.VerificaSesionactual();
   }
+
   VerificaSesionactual(){
     let datos= this.ObtenerInformacionSesion();
     if(datos){
       this.RefrescarDatosSesion(datos);
     }
   }
-  ObtenerDatosUsuarioEnSesion(){
-    return this.datosUsuarioEnSesion.asObservable();
-  }
+
   RefrescarDatosSesion(datos: ModeloIdentificar){
     this.datosUsuarioEnSesion.next(datos);
   }
 
-
+  ObtenerDatosUsuarioEnSesion(){
+    return this.datosUsuarioEnSesion.asObservable();
+  }
 
   Identificar(usuario: string, clave: string): Observable<ModeloIdentificar>{
     return this.http.post<ModeloIdentificar>(`${this.url}/identificarPersona`, {
@@ -43,7 +44,7 @@ export class SeguridadService {
 AlmacenarSesion(datos: ModeloIdentificar){
   datos.estaIdentificado=true;
   let stringDatos= JSON.stringify(datos);
-  console.log("Llegue" + stringDatos);
+  console.log("Llegue seguridad service" + stringDatos);
   localStorage.setItem("datosSesion", stringDatos);
   this.RefrescarDatosSesion(datos);
 

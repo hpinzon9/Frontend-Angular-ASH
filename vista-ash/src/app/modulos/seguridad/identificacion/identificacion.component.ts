@@ -38,7 +38,7 @@ export class IdentificacionComponent implements OnInit {
       this.router.navigate(["/inicio"]);
     }, (error: any) => {
       //error
-      console.log("Datos Invalidos")
+      console.log("Datos Invalidos seguridad service")
     })
   }
 
