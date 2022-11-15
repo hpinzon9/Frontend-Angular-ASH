@@ -4,11 +4,10 @@
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
             <li *ngIf="seInicioSesion"><a routerLink="/administracion/personas">Personas</a></li>
-            <li *ngIf="seInicioSesion"><a routerLink="/administracion/empresa">empresas</a></li>
-            <li *ngIf="seInicioSesion"><a routerLink="/administracion/empleado">empleado</a></li>
-            <li *ngIf="seInicioSesion"><a routerLink="/administracion/listar-clientes">cliente</a></li>
-            <li *ngIf="seInicioSesion"><a routerLink="/administracion/directivos">directivo</a></li>
-            <li *ngIf="seInicioSesion"><a routerLink="/administracion/clientes">Components</a></li>
+            <li *ngIf="seInicioSesion"><a routerLink="/administracion/buscar-empresa">Empresa</a></li>
+            <li *ngIf="seInicioSesion"><a routerLink="/administracion/empleado">Empleado</a></li>
+            <li *ngIf="seInicioSesion"><a routerLink="/administracion/listar-clientes">Cliente</a></li>
+            <li *ngIf="seInicioSesion"><a routerLink="/administracion/directivos">Directivo</a></li>
             <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cambioClave">Cambiar clave</a></li>
             <li *ngIf="seInicioSesion"><a routerLink="/seguridad/CerrarSesion">Cerrar Sesion</a></li>
             <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/identificar">Iniciar Sesion</a></li>
@@ -18,11 +17,10 @@
 
 <ul class="sidenav" id="mobile-demo">
     <li *ngIf="seInicioSesion"><a routerLink="/administracion/personas">Personas</a></li>
-    <li *ngIf="seInicioSesion"><a routerLink="/administracion/empresa">empresas</a></li>
-    <li *ngIf="seInicioSesion"><a routerLink="/administracion/empleado">empleado</a></li>
-    <li *ngIf="seInicioSesion"><a routerLink="/administracion/listar-clientes">cliente</a></li>
-    <li *ngIf="seInicioSesion"><a routerLink="/administracion/directivos">directivo</a></li>
-    <li *ngIf="seInicioSesion"><a routerLink="/administracion/clientes">Components</a></li>
+    <li *ngIf="seInicioSesion"><a routerLink="/administracion/buscar-empresa">Empresas</a></li>
+    <li *ngIf="seInicioSesion"><a routerLink="/administracion/empleado">Empleado</a></li>
+    <li *ngIf="seInicioSesion"><a routerLink="/administracion/listar-clientes">Cliente</a></li>
+    <li *ngIf="seInicioSesion"><a routerLink="/administracion/directivos">Directivo</a></li>
     <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cambioClave">Cambiar clave</a></li>
     <li *ngIf="seInicioSesion"><a routerLink="/seguridad/CerrarSesion">Cerrar Sesion</a></li>
     <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/identificar">Iniciar Sesion</a></li>

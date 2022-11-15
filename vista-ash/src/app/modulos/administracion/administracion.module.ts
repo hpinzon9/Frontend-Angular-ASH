@@ -10,6 +10,11 @@ import { CrearClienteComponent } from './clientes/crear-cliente/crear-cliente.co
 import { EditarClienteComponent } from './clientes/editar-cliente/editar-cliente.component';
 import { EliminarClienteComponent } from './clientes/eliminar-cliente/eliminar-cliente.component';
 import { BuscarClienteComponent } from './clientes/buscar-cliente/buscar-cliente.component';
+import { CrearEmpresaComponent } from './empresa/crear-empresa/crear-empresa.component';
+import { BuscarEmpresaComponent } from './empresa/buscar-empresa/buscar-empresa.component';
+import { EditarEmpresaComponent } from './empresa/editar-empresa/editar-empresa.component';
+import { EliminarEmpresaComponent } from './empresa/eliminar-empresa/eliminar-empresa.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,11 +25,17 @@ import { BuscarClienteComponent } from './clientes/buscar-cliente/buscar-cliente
     CrearClienteComponent,
     EditarClienteComponent,
     EliminarClienteComponent,
-    BuscarClienteComponent
+    BuscarClienteComponent,
+    CrearEmpresaComponent,
+    BuscarEmpresaComponent,
+    EditarEmpresaComponent,
+    EliminarEmpresaComponent
   ],
   imports: [
     CommonModule,
-    AdministracionRoutingModule
+    AdministracionRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class AdministracionModule { }

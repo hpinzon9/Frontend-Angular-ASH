@@ -1,0 +1,28 @@
+<h3>Listado de Empresas</h3>
+<a routerLink="/administracion/crear-empresa" class="btn">Nueva Empresa</a>
+<table class="table responsive">
+  <thead>
+    <tr>
+      <th>Nit</th>
+      <th>Razon Social</th>
+      <th>Direccion</th>
+      <th>Editar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of listadoRegistros">
+        <td>
+            {{p.nit}}
+        </td>
+        <td>
+            {{p.razon_social}}
+        </td>
+        <td>
+            {{p.direccion}}
+        </td>
+        <td>
+          <a routerLink="/administracion/editar-empresa/{{p.id}}" class="btn">Editar Empresa</a>
+        </td>
+    </tr>
+  </tbody>
+</table>

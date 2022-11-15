@@ -1,0 +1,26 @@
+<div class="row">
+    <h3 class="center-align">Crear Empresa</h3>
+    <article class="col s6 offset-s3">
+      <form [formGroup]="fgValidador" (ngSubmit)="GuardarEmpresa()" method="POST" action="formulario-contacto.php">
+        <div class="input-field">
+          <label for="nit">Nit</label>
+          <input formControlName="nit" type="text" name="nit" required />
+        </div>
+  
+        <div class="input-field">
+          <label for="razon_social">Razon_Social</label>
+          <input formControlName="razon_social" type="text" name="razon_social" required />
+        </div>
+  
+        <div class="input-field">
+          <label for="direccion">Direccion</label>
+          <input formControlName="direccion" type="text" name="direccion" required />
+        </div>
+  
+        <p class="center-align">
+          <button [disabled]="!fgValidador.valid" class="waves-effect waves-light btn" type="submit"><i class="material-icons right">send</i>Enviar</button>
+        </p>
+      </form>
+    </article>
+  </div>
+  

@@ -1,34 +1,34 @@
 <div class="row">
   <h3 class="center-align">Crear Cliente</h3>
   <article class="col s6 offset-s3">
-    <form method="POST" action="formulario-contacto.php">
+    <form [formGroup]="fgValidador" (ngSubmit)="GuardarCliente()" method="POST" action="formulario-contacto.php">
       <div class="input-field">
         <label for="identificacion">Identificacion</label>
-        <input type="text" name="identificacion" required />
+        <input formControlName="identificacion" type="text" name="identificacion" required />
       </div>
 
       <div class="input-field">
         <label for="razon_social">Razon_Social</label>
-        <input type="text" name="razon_social" required />
+        <input formControlName="razon_social" type="text" name="razon_social" required />
       </div>
 
       <div class="input-field">
         <label for="telefono">Telefono</label>
-        <input type="text" name="telefono" required />
+        <input formControlName="telefono" type="text" name="telefono" required />
       </div>
 
       <div class="input-field">
         <label for="direccion">Direccion</label>
-        <input type="text" name="direccion" required />
+        <input formControlName="direccion" type="text" name="direccion" required />
       </div>
 
       <div class="input-field">
         <label for="email">email</label>
-        <input type="text" name="email" required />
+        <input formControlName="correo" type="text" name="email" required />
       </div>
 
       <p class="center-align">
-        <button class="waves-effect waves-light btn" type="submit"><i class="material-icons right">send</i>Enviar</button>
+        <button [disabled]="!fgValidador.valid" class="waves-effect waves-light btn" type="submit"><i class="material-icons right">send</i>Enviar</button>
       </p>
     </form>
   </article>

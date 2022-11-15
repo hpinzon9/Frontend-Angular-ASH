@@ -15,6 +15,7 @@ export class BuscarClienteComponent implements OnInit {
   constructor(private clienteServicio: ClienteService) { }
 
   ngOnInit(): void {
+    this.ObtenerListadoClientes();
   }
 
   ObtenerListadoClientes(){
