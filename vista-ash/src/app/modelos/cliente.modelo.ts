@@ -1,6 +1,6 @@
 export class ModeloCliente{
     id?: string;
-    identifiacion?: string;
+    identificacion?: string;
     razon_social?: string;
     telefono?: string;
     direccion?: string;

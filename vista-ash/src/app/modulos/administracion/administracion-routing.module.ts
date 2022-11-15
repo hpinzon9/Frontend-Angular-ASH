@@ -19,7 +19,7 @@ const routes: Routes = [
     canActivate: [ValidadorSesionGuard]
   },
   {
-    path: 'litar-clientes',
+    path: 'listar-clientes',
     component: BuscarClienteComponent
   },
   {
