@@ -22,6 +22,10 @@ export class EmpresaService {
     return this.http.get<ModeloEmpresa[]>(`${this.url}/empresas`);
   }
 
+  ObtenerRegistrosPorId(id: string): Observable<ModeloEmpresa> {
+    return this.http.get<ModeloEmpresa>(`${this.url}/empresas`);
+  }
+
   CrearEmpresa(empresa: ModeloEmpresa): Observable<ModeloEmpresa>{
     return this.http.post<ModeloEmpresa>(`${this.url}/empresas`, empresa, {
       headers: new HttpHeaders({

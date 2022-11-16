@@ -19,6 +19,10 @@ export class ClienteService {
     return this.http.get<ModeloCliente[]>(`${this.url}/clientes`)
   }
 
+  ObtenerRegistrosPorId(id: string): Observable<ModeloCliente>{
+    return this.http.get<ModeloCliente>(`${this.url}/clientes`)
+  }
+
   CrearCliente(cliente: ModeloCliente): Observable<ModeloCliente>{
     return this.http.post<ModeloCliente>(`${this.url}/clientes`, cliente , {
       headers: new HttpHeaders({
