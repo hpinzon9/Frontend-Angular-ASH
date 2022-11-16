@@ -25,6 +25,19 @@ export class EditarClienteComponent implements OnInit {
     private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.id = this.route.snapshot.params["id"];
+    this.BuscarCliente();
+  }
+
+  BuscarCliente(){
+    this.servicioCliente.ObtenerRegistrosPorId(this.id).subscribe((datos: ModeloCliente)=> {
+      this.fgValidador.controls["id"].setValue(this.id);
+      this.fgValidador.controls["identificacion"].setValue(datos.identificacion);
+      this.fgValidador.controls["razon_social"].setValue(datos.razon_social);
+      this.fgValidador.controls["telefono"].setValue(datos.telefono);
+      this.fgValidador.controls["direccion"].setValue(datos.direccion);
+      this.fgValidador.controls["correo"].setValue(datos.correo);
+    })
   }
 
   EditarCliente(){

@@ -1,7 +1,7 @@
 <div class="row">
     <h3 class="center-align">Editar Cliente</h3>
     <article class="col s6 offset-s3">
-      <form [formGroup]="fgValidador" (ngSubmit)="GuardarCliente()" method="POST" action="formulario-contacto.php">
+      <form [formGroup]="fgValidador" (ngSubmit)="EditarCliente()" method="POST" action="formulario-contacto.php">
         <input type="hidden" formControlName="id"/>
         <div class="input-field">
           <label for="identificacion" class="active">Identificacion</label>
