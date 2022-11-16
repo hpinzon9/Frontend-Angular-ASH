@@ -52,11 +52,12 @@ export class EditarClienteComponent implements OnInit {
     p.telefono = telefono;
     p.direccion = direccion;
     p.correo = correo;
-    this.servicioCliente.CrearCliente(p).subscribe((datos: ModeloCliente) =>{
-      console.log("Cliente Creado Correctamente");
+    p.id = this.id;
+    this.servicioCliente.ActualizarCliente(p).subscribe((datos: ModeloCliente) =>{
+      console.log("Cliente Actualizado Correctamente");
       this.router.navigate(["/administracion/listar-cliente"]);
     },(error: any)=>{
-      console.log("Error almacenando Cliente");
+      console.log("Error Actualizando Cliente");
     })
   }
 
