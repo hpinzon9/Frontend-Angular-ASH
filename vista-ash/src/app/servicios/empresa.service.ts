@@ -23,7 +23,7 @@ export class EmpresaService {
   }
 
   ObtenerRegistrosPorId(id: string): Observable<ModeloEmpresa> {
-    return this.http.get<ModeloEmpresa>(`${this.url}/empresas`);
+    return this.http.get<ModeloEmpresa>(`${this.url}/empresas/${id}`);
   }
 
   CrearEmpresa(empresa: ModeloEmpresa): Observable<ModeloEmpresa>{
@@ -35,7 +35,7 @@ export class EmpresaService {
   }
 
   ActualizarEmpresa(empresa: ModeloEmpresa): Observable<ModeloEmpresa>{
-    return this.http.put<ModeloEmpresa>(`${this.url}/empresas`, empresa , {
+    return this.http.put<ModeloEmpresa>(`${this.url}/empresas/${empresa.id}`, empresa , {
       headers: new HttpHeaders({
         'Authorization': `Bearer ${this.token}`
       })
