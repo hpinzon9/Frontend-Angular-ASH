@@ -46,11 +46,12 @@ export class EditarEmpresaComponent implements OnInit {
     p.nit = nit;
     p.razon_social = razon_social;
     p.direccion = direccion;
-    this.servicioEmpresa.CrearEmpresa(p).subscribe((datos: ModeloEmpresa) =>{
-      console.log("Empresa Creada Correctamente");
+    p.id = this.id;
+    this.servicioEmpresa.ActualizarEmpresa(p).subscribe((datos: ModeloEmpresa) =>{
+      console.log("Empresa Actualizad Correctamente");
       this.router.navigate(["/administracion/buscar-emnpresa"]);
     },(error: any)=>{
-      console.log("Error almacenando Empresa");
+      console.log("Error Actualizando Empresa");
     })
   }
 
