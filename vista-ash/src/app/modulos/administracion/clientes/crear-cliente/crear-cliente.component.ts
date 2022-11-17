@@ -26,7 +26,7 @@ export class CrearClienteComponent implements OnInit {
   }
 
   GuardarCliente(){
-    let identificacion = this.fgValidador.controls["nit"].value;
+    let identificacion = this.fgValidador.controls["identificacion"].value;
     let razon_social = this.fgValidador.controls["razon_social"].value;
     let telefono = this.fgValidador.controls["telefono"].value;
     let direccion = this.fgValidador.controls["direccion"].value;
